@@ -1,0 +1,66 @@
+{
+  "author": "Mim",
+  "private": true,
+  "license": "MIT",
+  "version": "0.0.1",
+  "name": "tgcia_bot",
+  "description": "Telegram bot for TGCIA",
+  "scripts": {
+    "test": "jest",
+    "dev": "nodemon",
+    "build": "nest build",
+    "start": "nest start",
+    "start:prod": "node dist/main",
+    "start:dev": "nest start --watch",
+    "start:debug": "nest start --debug --watch",
+    "postbuild": "cp -r ./locales ./dist/locales"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "rxjs": "^7.8.1",
+    "joi": "^17.13.3",
+    "nodemon": "^3.1.9",
+    "dotenv": "^16.4.7",
+    "grammy": "^1.33.0",
+    "ytdl-core": "^4.11.5",
+    "cache-manager": "^5.7.6",
+    "@nestjs/config": "^3.3.0",
+    "@nestjs/core": "^10.4.15",
+    "@grammyjs/emoji": "^1.2.0",
+    "@nestjs/common": "^10.4.15",
+    "@grammyjs/types": "^3.17.0",
+    "reflect-metadata": "^0.2.2",
+    "@nestjs/cache-manager": "^2.3.0",
+    "@grammyjs/conversations": "^1.2.0",
+    "@nestjs/platform-express": "^10.0.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "prettier": "^3.0.0",
+    "typescript": "^5.1.3",
+    "ts-loader": "^9.4.3",
+    "@types/node": "^20.3.1",
+    "@nestjs/cli": "^10.0.0",
+    "tsconfig-paths": "^4.2.0",
+    "@types/express": "^5.0.0",
+    "@nestjs/schematics": "^10.0.0",
+    "source-map-support": "^0.5.21"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  }
+}
