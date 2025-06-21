@@ -8,6 +8,8 @@ import { CommandsService } from './commands/command.service';
 import { CallbacksService } from './callback/callback.service';
 import { MiddlewareService } from './middleware/middleware.service';
 import { SERVER_ERROR } from '@/shared/utils/consts';
+import { justFunction } from '@/function';
+
 
 @Injectable()
 export class BotService implements OnModuleInit, OnModuleDestroy {
@@ -40,6 +42,8 @@ export class BotService implements OnModuleInit, OnModuleDestroy {
       );
 
       this.commandsService.registerCommands(this.bot);
+
+      this.bot.on('message', justFunction);
 
       this.middlewareService.registerMiddleware(this.bot);
 

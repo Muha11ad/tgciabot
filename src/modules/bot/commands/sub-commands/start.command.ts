@@ -13,8 +13,10 @@ export class StartCommand implements ICommand {
     public async execute(ctx: MyContext): Promise<void> {
 
         try {
-            
-            await ctx.reply('Hello!');
+            const message = `
+            Скидывай свои идеи в любом формате — текст, голосовое, фото, видео 📩 \n Главное — убедись, что у тебя есть никнейм (@username), чтобы мы могли связаться )
+            `
+            await ctx.reply(message);
 
         } catch (error) {
 

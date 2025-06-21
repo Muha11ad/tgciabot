@@ -8,6 +8,5 @@ export class CallbacksService {
   ) { }
 
   registerCallbacks(bot: Bot<MyContext>) {
-
   }
 }
